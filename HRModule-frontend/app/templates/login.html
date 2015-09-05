@@ -1,0 +1,36 @@
+
+<div class="row" ng-controller="userLoginCtrl">
+    <div class="col-sm-6 col-md-4 col-md-offset-4">
+        <img class="image" src="images/aureusLogo.png"/>
+        <div class="account-wall">
+
+            <form name="loginForm" class="form-signin" novalidate>
+
+                <div>
+                    <input type="email" class="form-control" placeholder="Email" ng-model="login.email" name="uEmail" required autofocus>
+                    <div ng-show="loginForm.uEmail.$touched && loginForm.uEmail.$dirty">
+                        <div class="error" ng-show="loginForm.uEmail.$error.required">Email is Required.</div>
+                        <div class="error" ng-show="loginForm.uEmail.$error.email">Email is wrong format.</div>
+                    </div>
+                </div>
+                <br/>
+
+
+                <input type="password" class="form-control" placeholder="Password" name="uPwd" ng-model="login.pwd" required>
+                <div class="error" ng-show="loginForm.uPwd.$touched && loginForm.uPwd.$dirty && loginForm.uPwd.$error.required">
+                    Password is Required.
+                </div>
+                <br/>
+                <button class="btn btn-lg btn-primary btn-block" type="submit">
+                    Sign in</button>
+                <label class="checkbox pull-left">
+                    <input type="checkbox" value="remember-me">
+                    Remember me
+                </label>
+                <a href="#" class="pull-right need-help">Need help? </a><span class="clearfix"></span>
+            </form>
+            <a href="#" class="text-center new-account" ng-click="trigger('newAccount')">Create an account </a>
+        </div>
+
+    </div>
+</div>
