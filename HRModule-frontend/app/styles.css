@@ -93,3 +93,8 @@ body{
     height:100vh;
     /*background-size: 100% auto contain;*/
 }
+
+.error{
+    color: navy;
+    font-weight: bolder;
+}
